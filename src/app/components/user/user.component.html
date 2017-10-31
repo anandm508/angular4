@@ -1,0 +1,21 @@
+<h1>{{name}}</h1>
+<h1>{{age}}</h1>
+<h1>{{email}}</h1>
+<h1>{{address.addressLine1}}, {{address.addressLine2}}, {{address.state}}, {{address.country}}</h1>
+
+<form (submit)="onSubmit()">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" [(ngModel)]="name" name="name">
+  </div>
+</form>
+
+<button (click)="onClick()">Click Me</button>
+<ul>
+  <li *ngFor="let hobby of hobbies; let i=index">{{i +1}}: {{hobby}}</li>
+</ul>
+
+<div *ngFor="let post of posts">
+  <h4>{{post.title}}</h4>
+  <p>{{post.body}}</p>
+</div>
